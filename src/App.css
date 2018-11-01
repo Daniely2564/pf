@@ -1,32 +1,183 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
+.footer{
   text-align: center;
+  position:fixed;
+  bottom: 0px;
+  width:48%;
+  border : 1px solid #ddd;
+  left:50%;
+  transform:translateX(-50%);
+  padding: 10px;
+  padding-top:22px;
+  border-top-left-radius : 10px;
+  border-top-right-radius : 10px;
+  background-color: #ddd;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.icon-button{
+  border: 10px solid;
+  cursor:pointer;
+  display:inline-block;
+  padding:40px;
+  background-color:#fff;
+  border-radius:15px;
+  border-width: 3px;
+  position:relative;
+  height: 120px;
+  width: 120px;
+  margin-left: 20px;
+  box-shadow: 2px 2px 15px #888888;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon-button:hover{
+  animation-name: impact;
+  animation-duration: 0.1s;
+  transform: scale(1.02)
+}
+@keyframes impact {
+  0%   {transform: scale(1.0)}
+  80%  {transform: scale(1.05)}
+  100% {transform: scale(1.02)}
 }
 
-.App-link {
-  color: #61dafb;
+.btn-txt{
+  position:absolute;
+  top:76%;
+  display:block;
+  font-weight:600;
+  left:50%;
+  transform:translateX(-50%);
+}
+.btn-icon{
+  position:absolute;
+  top:44%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#profile:hover{
+  color: #fff;
+  background-color: #555;
+}
+
+#profile:hover .btn-icon, #profile:hover .btn-txt{
+  color: #fff;
+}
+
+#profile:hover{
+  color: #fff;
+  background-color: #555;
+}
+
+#profile:hover .btn-icon, #profile:hover .btn-txt{
+  color: #fff;
+}
+
+#nodejs:hover{
+  color: #fff;
+  background-color: #6cc24a;
+}
+
+#nodejs:hover .btn-icon, #nodejs:hover .btn-txt{
+  color: #fff;
+}
+
+#react:hover{
+  color: #fff;
+  background-color: #61DBFB;
+}
+
+#react:hover .btn-icon, #react:hover .btn-txt{
+  color: #fff;
+}
+
+#java:hover{
+  color: #fff;
+  background-color: #E86D01;
+}
+
+#java:hover .btn-icon, #java:hover .btn-txt{
+  color: #fff;
+}
+
+#youtube:hover{
+  color: #fff;
+  background-color: #FF0000;
+}
+
+#youtube:hover .btn-icon, #youtube:hover .btn-txt{
+  color: #fff;
+}
+
+.container{
+  width:1180px;
+  margin: 0 auto;
+}
+.profile-container{
+   position:'relative';
+}
+.head{
+  font-family: 'Lato', sans-serif;
+  background-image: linear-gradient(#ffffff41, #ffffff2f),url(./img/profile/background.jpg);
+  background-size: cover;
+  position:top;
+  height: 56vh;
+  z-index: 1;
+}
+
+.myprofile{
+  position:absolute;
+  width: 60%;
+  border : 1px solid #8080802c;
+  background-color:#fff;
+  height: 60%;
+  top: 40%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  box-shadow: 2px 2px 1px rgba(85, 85, 85, 0.322);
+  background-color: rgb(179, 179, 179);
+}
+
+.info{
+  background-color:#fff;
+  height:85%;
+}
+
+.my-image{
+  height: 280px;
+  position:absolute;
+  top: 42.5%;
+  left:20%;
+  transform:translate(-50%,-50%);
+}
+
+.description{
+  top:10%;
+  height: 70%;
+  left:41%;
+  position:absolute;
+}
+
+.profile-bottom{
+  width:100%;
+  text-align:center;
+}
+
+.fb-div{
+  
+}
+
+.link-icon{
+  position:absolute;
+  top: 50%;
+  transform:translateY(-50%);
+  left:30%;
+}
+.white-icon{
+  color:white;
+  transition: color 0.4s;
+}
+
+fb:hover{
+  color:#4267B2;
 }

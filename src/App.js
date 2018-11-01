@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Footer from './components/Footer/Footer';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import "semantic-ui-css/semantic.min.css";
+import Contents from './components/Contents/Contents';
+import Profile from './components/List/Profile/Profile';
 
 class App extends Component {
+  state = {
+    current: 'profile',
+  }
+  showMain = () => {
+    switch (this.state.current) {
+      case 'profile': {
+        return <Profile />
+      }
+    }
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+        <div className="container">
+          {this.showMain()}
+        </div>
+        <footer className="footer">
+          <Footer />
+        </footer>
       </div>
     );
   }
