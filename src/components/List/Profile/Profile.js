@@ -1,5 +1,40 @@
 import React, { Component } from 'react'
 export default class Profile extends Component {
+    sns = [
+        {
+            type:'facebook',
+            shorten:'fb',
+            link:'https://www.facebook.com/profile.php?id=100014349903170',
+        },
+        {
+            type:'linkedin',
+            shorten: 'li',
+            link:'https://www.linkedin.com/in/dvlpryoo/',
+        },
+        {  
+            type:'github',
+            shorten: 'gh',
+            link:'#',
+        },
+        {
+            type:'youtube',
+            shorten: 'yt',
+            link:'#',
+        },{
+            type:'google plus square',
+            shorten:'gm',
+            link:'#',
+        }
+    ]
+    renderIcons = (items)=>{
+        return items.map(item=>{
+            return (
+                        <div style={{ position: 'absolute' }} className={item.shorten+"-div link-icon"}>
+                            <a href={item.link} target="_blank" className={ item.shorten+" white-icon"}><i className={item.type+" icon big"} /></a>
+                        </div>
+            )
+        })
+    }
     render() {
         return (
             <div style={{ backgroundColor: '#f5f5f5', height: '100vh' }} className="profile-container">
@@ -46,9 +81,7 @@ export default class Profile extends Component {
                         </div>
                     </div>
                     <div className="profile-bottom" style={{ height: '15%', position: 'relative' }}>
-                        <div style={{ position: 'absolute' }} className="fb-div link-icon">
-                            <a href="#" className="white-icon"><i className="facebook icon big" /></a>
-                        </div>
+                        {this.renderIcons(this.sns)}
                     </div>
                 </div>
             </div>

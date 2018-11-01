@@ -5,6 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import "semantic-ui-css/semantic.min.css";
 import Contents from './components/Contents/Contents';
 import Profile from './components/List/Profile/Profile';
+import NodeJS from './components/List/NodeJS/NodeJS';
 
 class App extends Component {
   state = {
@@ -15,7 +16,13 @@ class App extends Component {
       case 'profile': {
         return <Profile />
       }
+      case 'nodejs':{
+        return <NodeJS/>
+      }
     }
+  }
+  changePage = (item)=>{
+    this.setState({current:item});
   }
   render() {
     return (
@@ -24,7 +31,7 @@ class App extends Component {
           {this.showMain()}
         </div>
         <footer className="footer">
-          <Footer />
+          <Footer changePage={this.changePage}/>
         </footer>
       </div>
     );

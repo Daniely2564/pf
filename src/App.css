@@ -164,14 +164,13 @@
 }
 
 .fb-div{
-  
+  left:30%;
 }
 
 .link-icon{
   position:absolute;
   top: 50%;
   transform:translateY(-50%);
-  left:30%;
 }
 .white-icon{
   color:white;
@@ -180,4 +179,35 @@
 
 fb:hover{
   color:#4267B2;
+}
+.li-div{
+  left: 40%;
+}
+
+.li:hover{
+  color:#111111;
+}
+
+.gh-div{
+  left: 50%;
+}
+
+.gh:hover{
+  color: #000;
+}
+
+.yt:hover{
+  color : #ff0000;
+}
+
+.yt-div{
+  left:60%;
+}
+
+.gm:hover{
+  color: #D6492F;
+}
+
+.gm-div{
+  left:70%;
 }

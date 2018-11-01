@@ -31,7 +31,7 @@ export default class Footer extends Component {
     ]
     renderButtons = (buttons) => {
         return buttons.map((button) => {
-            return <Button button={button} />
+            return <Button button={button} changePage={this.props.changePage}/>
         })
     }
     render() {
