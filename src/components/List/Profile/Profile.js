@@ -2,36 +2,36 @@ import React, { Component } from 'react'
 export default class Profile extends Component {
     sns = [
         {
-            type:'facebook',
-            shorten:'fb',
-            link:'https://www.facebook.com/profile.php?id=100014349903170',
+            type: 'facebook',
+            shorten: 'fb',
+            link: 'https://www.facebook.com/profile.php?id=100014349903170',
         },
         {
-            type:'linkedin',
+            type: 'linkedin',
             shorten: 'li',
-            link:'https://www.linkedin.com/in/dvlpryoo/',
-        },
-        {  
-            type:'github',
-            shorten: 'gh',
-            link:'#',
+            link: 'https://www.linkedin.com/in/dvlpryoo/',
         },
         {
-            type:'youtube',
+            type: 'github',
+            shorten: 'gh',
+            link: 'https://github.com/Daniely2564/portfolio',
+        },
+        {
+            type: 'youtube',
             shorten: 'yt',
-            link:'#',
-        },{
-            type:'google plus square',
-            shorten:'gm',
-            link:'#',
+            link: 'https://www.youtube.com/channel/UCU2RDu6Vhlgu3YV0puxz66A?view_as=subscriber',
+        }, {
+            type: 'google plus square',
+            shorten: 'gm',
+            link: 'https://mailto:dvlpryoo@gmail.com',
         }
     ]
-    renderIcons = (items)=>{
-        return items.map(item=>{
+    renderIcons = (items) => {
+        return items.map(item => {
             return (
-                        <div style={{ position: 'absolute' }} className={item.shorten+"-div link-icon"}>
-                            <a href={item.link} target="_blank" className={ item.shorten+" white-icon"}><i className={item.type+" icon big"} /></a>
-                        </div>
+                <div style={{ position: 'absolute' }} className={item.shorten + "-div link-icon"}>
+                    <a href={item.link} target="_blank" className={item.shorten + " white-icon"}><i className={item.type + " icon big"} /></a>
+                </div>
             )
         })
     }

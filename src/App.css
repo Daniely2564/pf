@@ -1,213 +1,171 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i');
-.footer{
-  text-align: center;
-  position:fixed;
-  bottom: 0px;
-  width:48%;
-  border : 1px solid #ddd;
-  left:50%;
-  transform:translateX(-50%);
-  padding: 10px;
-  padding-top:22px;
-  border-top-left-radius : 10px;
-  border-top-right-radius : 10px;
-  background-color: #ddd;
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i);.footer{text-align:center;position:fixed;bottom:0;width:48%;border:1px solid #ddd;left:50%;transform:translateX(-50%);padding:10px;padding-top:22px;border-top-left-radius:10px;border-top-right-radius:10px;background-color:#ddd}.icon-button{border:10px solid;cursor:pointer;display:inline-block;padding:40px;background-color:#fff;border-radius:15px;border-width:3px;position:relative;height:120px;width:120px;margin-left:20px;box-shadow:2px 2px 15px #888}.icon-button:hover{animation-name:impact;animation-duration:0.1s;transform:scale(1.02)}@keyframes impact{0%{transform:scale(1)}80%{transform:scale(1.05)}100%{transform:scale(1.02)}}.btn-txt{position:absolute;top:76%;display:block;font-weight:600;left:50%;transform:translateX(-50%)}.btn-icon{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%)}#profile:hover{color:#fff;background-color:#555}#profile:hover .btn-icon,#profile:hover .btn-txt{color:#fff}#profile:hover{color:#fff;background-color:#555}#profile:hover .btn-icon,#profile:hover .btn-txt{color:#fff}#nodejs:hover{color:#fff;background-color:#6cc24a}#nodejs:hover .btn-icon,#nodejs:hover .btn-txt{color:#fff}#react:hover{color:#fff;background-color:#61DBFB}#react:hover .btn-icon,#react:hover .btn-txt{color:#fff}#java:hover{color:#fff;background-color:#E86D01}#java:hover .btn-icon,#java:hover .btn-txt{color:#fff}#youtube:hover{color:#fff;background-color:red}#youtube:hover .btn-icon,#youtube:hover .btn-txt{color:#fff}.container{width:1180px;margin:0 auto}.profile-container{position:'relative'}.head{font-family:'Lato',sans-serif;background-image:linear-gradient(#ffffff02,#ffffffd3),url(./img/profile/background.jpg);background-size:cover;position:top;height:56vh;z-index:1}.myprofile{position:absolute;width:60%;border:1px solid #8080802c;background-color:#fff;height:60%;top:40%;left:50%;transform:translate(-50%,-50%);box-shadow:2px 2px 1px rgba(85,85,85,.322);background-color:rgb(179,179,179)}.info{background-color:#fff;height:85%}.my-image{height:280px;position:absolute;top:42.5%;left:20%;transform:translate(-50%,-50%)}.description{top:10%;height:70%;left:41%;position:absolute}.profile-bottom{width:100%;text-align:center}.fb-div{left:30%}.link-icon{position:absolute;top:50%;transform:translateY(-50%)}.white-icon{color:white;transition:color 0.4s}fb:hover{color:#4267B2}.li-div{left:40%}.li:hover{color:#111}.gh-div{left:50%}.gh:hover{color:#000}.yt:hover{color:red}.yt-div{left:60%}.gm:hover{color:#D6492F}.gm-div{left:70%}
+.header-container{
+    height:13vh;
+    background-color:#6cc24a;
 }
 
-.icon-button{
-  border: 10px solid;
-  cursor:pointer;
-  display:inline-block;
-  padding:40px;
-  background-color:#fff;
-  border-radius:15px;
-  border-width: 3px;
-  position:relative;
-  height: 120px;
-  width: 120px;
-  margin-left: 20px;
-  box-shadow: 2px 2px 15px #888888;
+.header-txt{
+    color:#fff;
+    font-weight:800;
+    font-size:400%;
+    text-align: center;
+    padding-top:10px;
 }
 
-.icon-button:hover{
-  animation-name: impact;
-  animation-duration: 0.1s;
-  transform: scale(1.02)
-}
-@keyframes impact {
-  0%   {transform: scale(1.0)}
-  80%  {transform: scale(1.05)}
-  100% {transform: scale(1.02)}
+.box{
+    width:100%;
+    height:350px;
+    position:relative;
+    overflow:hidden;
+    transition: .5s;
 }
 
-.btn-txt{
-  position:absolute;
-  top:76%;
-  display:block;
-  font-weight:600;
-  left:50%;
-  transform:translateX(-50%);
-}
-.btn-icon{
-  position:absolute;
-  top:44%;
-  left:50%;
-  transform: translate(-50%,-50%);
+.figure{
+    width: 500px;
+    height:auto;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transition: .5s;
+    overflow:hidden;
+    background-color:#000;
+    cursor:pointer;
 }
 
-#profile:hover{
-  color: #fff;
-  background-color: #555;
+.figure img{
+    width: 100%;
+    transition: 0.5s;
+    margin:0;
+    top:25%;
+    height:100%;
+    transition: .5s;
+}
+.top-image{
+    top:0px;
+    width:100%;
+    height:20%;
+    background-image: url(./img/nodejs/screen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    transition: .5s;
+    z-index: 1;
 }
 
-#profile:hover .btn-icon, #profile:hover .btn-txt{
-  color: #fff;
+.figure:hover img{
+    opacity: 0.5;
+}   
+
+.caption{
+    position:absolute;
+    top: 40px;
+    left: 30px;
+    right:30px;
+    bottom:30px;
 }
 
-#profile:hover{
-  color: #fff;
-  background-color: #555;
+.caption::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: scale(0,1);
+    transition: .5s;
 }
 
-#profile:hover .btn-icon, #profile:hover .btn-txt{
-  color: #fff;
+.caption::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:100%;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: scale(1,0);
+    transition: .5s;
 }
 
-#nodejs:hover{
-  color: #fff;
-  background-color: #6cc24a;
+.figure:hover .caption::before{
+    transform: scale(1,1);
 }
 
-#nodejs:hover .btn-icon, #nodejs:hover .btn-txt{
-  color: #fff;
+.figure:hover .caption::after{
+    transform: scale(1,1);
 }
 
-#react:hover{
-  color: #fff;
-  background-color: #61DBFB;
+.text-box{
+    color: #fff;
+    opacity:0;
+    transition: .5s;
+}
+.text-box ul{
+    list-style: none;
 }
 
-#react:hover .btn-icon, #react:hover .btn-txt{
-  color: #fff;
+.text-box ul li{
+    border: 1px solid #fff;
+    border-radius: 3px;
+    padding: 6px 11px;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    display:inline-block;
+    font-size: 120%;
+    transition: .5s;
 }
 
-#java:hover{
-  color: #fff;
-  background-color: #E86D01;
+.text-box ul li:hover{
+    background-color: #fff;
+    color:transparent;
 }
 
-#java:hover .btn-icon, #java:hover .btn-txt{
-  color: #fff;
+.learn-more{
+    position:absolute;
+    left:50%;
+    bottom:5%;
+    transform:translate(-50%);
 }
 
-#youtube:hover{
-  color: #fff;
-  background-color: #FF0000;
+.figure:hover .text-box{
+    opacity: 1;
 }
 
-#youtube:hover .btn-icon, #youtube:hover .btn-txt{
-  color: #fff;
+.image-slider-container{
+    width:100%;
+    height:100%;
 }
 
-.container{
-  width:1180px;
-  margin: 0 auto;
-}
-.profile-container{
-   position:'relative';
-}
-.head{
-  font-family: 'Lato', sans-serif;
-  background-image: linear-gradient(#ffffff41, #ffffff2f),url(./img/profile/background.jpg);
-  background-size: cover;
-  position:top;
-  height: 56vh;
-  z-index: 1;
+.project-images{
+    width:100%;
+    height:100%;
 }
 
-.myprofile{
-  position:absolute;
-  width: 60%;
-  border : 1px solid #8080802c;
-  background-color:#fff;
-  height: 60%;
-  top: 40%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  box-shadow: 2px 2px 1px rgba(85, 85, 85, 0.322);
-  background-color: rgb(179, 179, 179);
+.project-intro{
+    text-transform:uppercase;
+    letter-spacing: 3px;
+    font-weight:800;
+    font-size: 300%;
 }
 
-.info{
-  background-color:#fff;
-  height:85%;
+.project-description ul{
+    margin-left:45px;
 }
 
-.my-image{
-  height: 280px;
-  position:absolute;
-  top: 42.5%;
-  left:20%;
-  transform:translate(-50%,-50%);
+.project-description ul li{
+    font-size: 200%;
+    line-height: 1.5;
 }
 
-.description{
-  top:10%;
-  height: 70%;
-  left:41%;
-  position:absolute;
+.project-description h2{
+    font-size:200%;
 }
 
-.profile-bottom{
-  width:100%;
-  text-align:center;
-}
-
-.fb-div{
-  left:30%;
-}
-
-.link-icon{
-  position:absolute;
-  top: 50%;
-  transform:translateY(-50%);
-}
-.white-icon{
-  color:white;
-  transition: color 0.4s;
-}
-
-fb:hover{
-  color:#4267B2;
-}
-.li-div{
-  left: 40%;
-}
-
-.li:hover{
-  color:#111111;
-}
-
-.gh-div{
-  left: 50%;
-}
-
-.gh:hover{
-  color: #000;
-}
-
-.yt:hover{
-  color : #ff0000;
-}
-
-.yt-div{
-  left:60%;
-}
-
-.gm:hover{
-  color: #D6492F;
-}
-
-.gm-div{
-  left:70%;
+.project-description p{
+    font-weight: 300;
+    font-size: 170%;
+    text-indent:100px;
 }

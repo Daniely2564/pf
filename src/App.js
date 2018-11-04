@@ -6,6 +6,7 @@ import "semantic-ui-css/semantic.min.css";
 import Contents from './components/Contents/Contents';
 import Profile from './components/List/Profile/Profile';
 import NodeJS from './components/List/NodeJS/NodeJS';
+import ReactJS from './components/List/ReactJS/ReactJS';
 
 class App extends Component {
   state = {
@@ -16,13 +17,19 @@ class App extends Component {
       case 'profile': {
         return <Profile />
       }
-      case 'nodejs':{
-        return <NodeJS/>
+      case 'nodejs': {
+        return <NodeJS />
+      }
+      case 'reactjs': {
+        return <ReactJS />
+      }
+      default: {
+        return <Profile />
       }
     }
   }
-  changePage = (item)=>{
-    this.setState({current:item});
+  changePage = (item) => {
+    this.setState({ current: item });
   }
   render() {
     return (
@@ -31,7 +38,7 @@ class App extends Component {
           {this.showMain()}
         </div>
         <footer className="footer">
-          <Footer changePage={this.changePage}/>
+          <Footer changePage={this.changePage} />
         </footer>
       </div>
     );
