@@ -1,5 +1,6 @@
 import React from 'react';
 import Intro from './Intro';
+import Customer from './Customer';
 
 class ReactJS extends React.Component {
     state = {
@@ -12,6 +13,8 @@ class ReactJS extends React.Component {
         switch (this.state.render) {
             case 'intro':
                 return <Intro render={this.renderProject} />;
+            case 'customer':
+                return <Customer render={this.renderProject} />;
             default:
                 return <Intro render={this.renderProject} />;
         }

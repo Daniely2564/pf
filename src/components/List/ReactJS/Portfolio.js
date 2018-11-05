@@ -3,16 +3,17 @@ import ProjectTemplate from './ProjectTemplate';
 
 const PortfolioObj = {
     sliders: [
+        <div>
+            <img src={require('./img/reactjs-2.png')} style={{ height: '90%' }} className="project-images" />
+        </div>
     ],
     skills: [
-        'NodeJS',
-        'ExpressJS',
-        'Youtube API',
+        'ReactJS',
+        'React-Slick',
         'Semantic UI',
-        'Node Mailer',
-        'Hanldebars JS',
-        'HTML',
         'CSS',
+        'Animation',
+        'HTML',
 
     ],
     h2: {

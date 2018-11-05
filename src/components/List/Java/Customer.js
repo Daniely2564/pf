@@ -1,20 +1,25 @@
 import React from 'react';
 import ProjectTemplate from './ProjectTemplate';
 
-const TypoGenObj = {
+const CustomerObj = {
     sliders: [
         <div>
-            <img src={require('./img/reactjs-1.png')} style={{ height: '90%' }} className="project-images" />
+            <img src={require('./img/swing.png')} style={{ height: '90%' }} className="project-images" />
+        </div>
+        ,
+        <div>
+            <img src={require('./img/swing2.gif')} style={{ height: '90%' }} className="project-images" />
         </div>,
         <div>
-            <img src={require('./img/typogen.gif')} style={{ height: '90%' }} className="project-images" />
+            <img src={require('./img/swing3.gif')} style={{ height: '90%' }} className="project-images" />
         </div>
     ],
     skills: [
-        'ReactJS',
-        'Google Font',
-        'CSS',
-        'HTML',
+        'Java',
+        'Java Swing',
+        'HSSFWorkbook',
+        'Windows Builder',
+        'Java Event Handler',
 
     ],
     h2: {
@@ -43,10 +48,10 @@ const TypoGenObj = {
 
 }
 
-const TypoGen = ({ render }) => {
+const Customer = ({ render }) => {
     return (
-        <ProjectTemplate render={render} Item={TypoGenObj} />
+        <ProjectTemplate render={render} Item={CustomerObj} />
     )
 }
 
-export default TypoGen;
+export default Customer;
