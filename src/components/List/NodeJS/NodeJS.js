@@ -1,6 +1,7 @@
 import React from 'react';
 import Intro from './Projects/Intro';
 import Satcademy from './Projects/Satcademy';
+import Blog from './Projects/Blog';
 
 class NodeJS extends React.Component {
     state = {
@@ -14,8 +15,9 @@ class NodeJS extends React.Component {
             case 'intro':
                 return <Intro render={this.renderProject} />;
             case 'satcademy':
-                return <Satcademy render={this.renderProject} />
-
+                return <Satcademy render={this.renderProject} />;
+            case 'blog':
+                return <Blog />
         }
     }
     render() {

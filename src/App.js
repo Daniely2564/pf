@@ -7,6 +7,7 @@ import Contents from './components/Contents/Contents';
 import Profile from './components/List/Profile/Profile';
 import NodeJS from './components/List/NodeJS/NodeJS';
 import ReactJS from './components/List/ReactJS/ReactJS';
+import Java from './components/List/Java/Java';
 
 class App extends Component {
   state = {
@@ -22,6 +23,9 @@ class App extends Component {
       }
       case 'reactjs': {
         return <ReactJS />
+      }
+      case 'java': {
+        return <Java />
       }
       default: {
         return <Profile />

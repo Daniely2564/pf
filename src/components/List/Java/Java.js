@@ -1,7 +1,5 @@
 import React from 'react';
 import Intro from './Intro';
-import TypoGen from './TypoGen';
-import Portfolio from './Portfolio';
 
 class ReactJS extends React.Component {
     state = {
@@ -14,10 +12,6 @@ class ReactJS extends React.Component {
         switch (this.state.render) {
             case 'intro':
                 return <Intro render={this.renderProject} />;
-            case 'typogenerator':
-                return <TypoGen render={this.renderProject} />;
-            case 'portfolio':
-                return <Portfolio render={this.renderProject} />;
             default:
                 return <Intro render={this.renderProject} />;
         }
@@ -26,9 +20,9 @@ class ReactJS extends React.Component {
 
         return (
             <div>
-                <div className="header-container" style={{ backgroundColor: '#61DBFB' }}>
+                <div className="header-container" style={{ backgroundColor: '#E86D01' }}>
                     <h1 className="header-txt">
-                        <i className="react icon" />React JS
+                        <i className="react icon" />Java
                     </h1>
                 </div>
                 {this.renderSwitch()}

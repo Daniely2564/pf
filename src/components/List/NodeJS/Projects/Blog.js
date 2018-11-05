@@ -1,48 +1,35 @@
 import React from 'react';
-import Slider from 'react-slick';
 import ProjectTemplate from './ProjectTemplate';
 
-const SatCademyObj = {
+const BlogObj = {
     sliders: [
         <div>
-            <img src={require('./img/hr1.png')} className="project-images" />
+            <img src={require('./img/ct1.png')} style={{ height: '90%' }} className="project-images" />
         </div>
         ,
         <div>
-            <img src={require('./img/hr2.gif')} className="project-images" />
-        </div>
-        , <div>
-            <img src={require('./img/hr3.gif')} className="project-images" />
-        </div>
-        , <div>
-            <img src={require('./img/hr4.gif')} className="project-images" />
-        </div>
-        , <div>
-            <img src={require('./img/hr5.gif')} className="project-images" />
+            <img src={require('./img/ct1.gif')} style={{ height: '90%' }} className="project-images" />
         </div>
         ,
     ],
     skills: [
         'NodeJS',
         'ExpressJS',
-        'MongoDB',
-        'Mongoose',
-        'Passport JS',
-        'HandlebarsJS',
+        'Youtube API',
+        'Semantic UI',
+        'Node Mailer',
+        'Hanldebars JS',
         'HTML',
-        'Bootstrap 4',
         'CSS',
-        'Animation',
-        'Javascript',
-        'ChartJS',
+
     ],
     h2: {
-        link: 'http://satcademy.herokuapp.com',
-        title: 'SATCADEMY - ',
+        link: 'http://www.danieltwlc.com',
+        title: 'DanielTWLC - ',
     },
     p: <div>
         <p>
-            <b>SATCADEMY</b> is a website built for teachers who teaches students who are
+            <b>DanielTWLC</b> is a website built for teachers who teaches students who are
             currently studying SAT. It allows them to score SAT tests, and display beautiful result
             on a printable format. After taking their tests, they can send the score to their parents,
             and students by clicking 'Send Email' button, and the sat scores are stored on each students
@@ -62,19 +49,10 @@ const SatCademyObj = {
 
 }
 
-const SatCademy = ({ render }) => {
-    let settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    }
+const Blog = ({ render }) => {
     return (
-        <div>
-            <ProjectTemplate Item={SatCademyObj} render={render} />
-        </div>
+        <ProjectTemplate render={render} Item={BlogObj} />
     )
 }
 
-export default SatCademy;
+export default Blog;
